@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Slider } from './components';
 import './App.css';
 
@@ -11,6 +12,13 @@ import photo6 from './assets/images/DSC05858.jpg';
 const photos = [photo1, photo2, photo3, photo4, photo5, photo6];
 
 function App() {
+	// preload all images
+	useEffect(() => {
+		photos.forEach((image) => {
+			new Image().src = image;
+		});
+	}, []);
+
 	return (
 		<div className='App'>
 			<Slider sources={photos} />
