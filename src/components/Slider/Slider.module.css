@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@500&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Finlandica', sans-serif;
+  max-width: 1000px;
+  max-height: 768px;
+  width: 100%;
+  height: 100%;
+}
+
+.root {
+  max-width: inherit;
+  max-height: inherit;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem;
+  background: #191A1B;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  z-index: 50;
+}
+
+.infoIconContainer {
+  padding: 1rem 1rem;
+  margin: .5rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s;
+  display: flex;
+  align-items: center;
+  font-size: 0.85em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.leftControl,
+.rightControl {
+  cursor: pointer;
+  display: flex;
+  padding: 1rem;
+  margin: 0 .5rem;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  bottom: 0;
+  transition: filter 0.35s;
+  user-select: none;
+}
+  
+.exifDataContainer {
+  background: black;
+  width: 100%;
+  display: flex;
+  height: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3rem 2rem 1rem 2rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  cursor: pointer;
+}
+
+.gridContainer {
+  padding: 0 0 0 2rem;
+}
+
+.gridContainer:first-child {
+  padding: 0 2rem 0 0;
+}
+
+.exifDataContainerTitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+  color: rgba(238, 250, 255, 0.65);
+}
+
+.exifDataContainerData {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.hintContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  font-size: 0.85em;
+}
+
+.hint {
+  color: white;
+}
+
+.hintIcons {
+  margin: 0 0.75em;
+}
+
+@media (hover: hover) {
+  .root:hover .image {
+    filter: brightness(0.5);
+  }
+  
+  .root:hover .infoIconContainer {
+    opacity: 1;
+  }
+}
