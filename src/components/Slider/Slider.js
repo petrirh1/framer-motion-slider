@@ -114,7 +114,6 @@ const Slider = ({ sources }) => {
 				<motion.img
 					onLoad={handleImageLoaded}
 					whileHover={{ filter: 'url(#brightness)' }}
-					onMouseEnter={() => console.log('onMouseEnter')}
 					className={styles.image}
 					src={images[index]}
 					key={images[index]}
