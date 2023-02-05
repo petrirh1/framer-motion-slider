@@ -18,7 +18,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 0.5rem;
-  background: #191A1B;
+  background: #0e0f0f;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
 }
@@ -63,6 +63,13 @@
   padding: 1rem;
   margin: 0 .5rem;
   align-items: center;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: 100;
 }
 
 .image {

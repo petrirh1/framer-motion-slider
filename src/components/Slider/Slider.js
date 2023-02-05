@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { LeftArrow, RightArrow, Info } from '../icons';
+import Loader from '../Loader/Loader';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import exifr from 'exifr';
 import styles from './Slider.module.css';
@@ -12,6 +13,7 @@ const Slider = ({ sources }) => {
 	const [index, setIndex] = useState(0);
 	const [exif, setExif] = useState(null);
 	const [showExif, setShowExif] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 	const left = useAnimation();
 	const right = useAnimation();
 
@@ -72,6 +74,12 @@ const Slider = ({ sources }) => {
 		}
 	};
 
+	const handleImageLoaded = () => setIsLoading(false);
+
+	useEffect(() => {
+		setIsLoading(true);
+	}, [index]);
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.root} onClick={handleToggleExif}>
@@ -91,7 +99,20 @@ const Slider = ({ sources }) => {
 						<RightArrow />
 					</motion.div>
 				</div>
+				<AnimatePresence>
+					{isLoading && (
+						<motion.div
+							className={styles.loader}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							style={{ color: 'red' }}>
+							<Loader />
+						</motion.div>
+					)}
+				</AnimatePresence>
 				<motion.img
+					onLoad={handleImageLoaded}
 					whileHover={{ filter: 'url(#brightness)' }}
 					onMouseEnter={() => console.log('onMouseEnter')}
 					className={styles.image}
