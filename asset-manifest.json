@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/framer-motion-slider/static/css/main.1c49ecbf.css",
-    "main.js": "/framer-motion-slider/static/js/main.1e9405a3.js",
+    "main.css": "/framer-motion-slider/static/css/main.b72cf9c9.css",
+    "main.js": "/framer-motion-slider/static/js/main.d77507e0.js",
     "static/media/DSC05838.jpg": "/framer-motion-slider/static/media/DSC05838.14c0c65d26f3e08dcec6.jpg",
     "static/media/DSC05847.jpg": "/framer-motion-slider/static/media/DSC05847.27e73c008460c41f0a86.jpg",
     "static/media/DSC05853.jpg": "/framer-motion-slider/static/media/DSC05853.c8f4eee7dcf36c0f587a.jpg",
@@ -9,11 +9,11 @@
     "static/media/DSC05856.jpg": "/framer-motion-slider/static/media/DSC05856.a355d9d2983f5af941d3.jpg",
     "static/media/DSC05857.jpg": "/framer-motion-slider/static/media/DSC05857.d248600589ee517fe870.jpg",
     "index.html": "/framer-motion-slider/index.html",
-    "main.1c49ecbf.css.map": "/framer-motion-slider/static/css/main.1c49ecbf.css.map",
-    "main.1e9405a3.js.map": "/framer-motion-slider/static/js/main.1e9405a3.js.map"
+    "main.b72cf9c9.css.map": "/framer-motion-slider/static/css/main.b72cf9c9.css.map",
+    "main.d77507e0.js.map": "/framer-motion-slider/static/js/main.d77507e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c49ecbf.css",
-    "static/js/main.1e9405a3.js"
+    "static/css/main.b72cf9c9.css",
+    "static/js/main.d77507e0.js"
   ]
 }
