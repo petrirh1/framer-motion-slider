@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { LeftArrow, RightArrow, Info } from '../icons';
+import { LeftArrow, RightArrow, Info, NavigationHint } from '../icons';
 import Loader from '../Loader/Loader';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import exifr from 'exifr';
 import styles from './Slider.module.css';
-import NavigationHint from '../icons/NavigationHint/NavigationHint';
 
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
@@ -123,7 +122,7 @@ const Slider = ({ sources }) => {
 				{exif && (
 					<div className={styles.info}>
 						<div className={styles.infoIconContainer}>
-							<Info cssClass={styles.hintIcons} />
+							<Info cssClass={styles.infoIcon} />
 							<span className={styles.hint}>Click the image to toggle exif info</span>
 						</div>
 					</div>

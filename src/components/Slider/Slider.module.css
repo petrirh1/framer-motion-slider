@@ -134,6 +134,10 @@
   margin: 0 0.75em;
 }
 
+.infoIcon {
+  margin-right: 0.75em;
+}
+
 @media (hover: hover) {
   .root:hover .image {
     filter: brightness(0.5);
